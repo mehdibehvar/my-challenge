@@ -1,6 +1,6 @@
 # how prevent exposing env variables in the source code by vite.js
 
-**this is a config for acces .env variable by proccess.env**
+**This is a config for access to .env variable by proccess.env**
 ```js
 import path from 'path';
 import dotenv from 'dotenv';
