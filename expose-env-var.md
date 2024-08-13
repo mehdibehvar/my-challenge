@@ -10,7 +10,6 @@ const envPath = path.resolve(__dirname, './.env');
 // Load environment variables from .env file and put them in proccess.env
 dotenv.config({ path: envPath });
 ```
-*Italic Text*
 
 - To prevent accidentally leaking env variables to the client,
  only variables prefixed with VITE_ are exposed to your Vite-processed code.
@@ -21,6 +20,8 @@ VITE_SOME_KEY=123
 DB_PASSWORD=foobar
 ```
 Only VITE_SOME_KEY will be exposed as import.meta.env.VITE_SOME_KEY
+
+
 
 - If you would like to expose an unprefixed variable, you can use define to expose it:
 
@@ -39,7 +40,7 @@ Only VITE_SOME_KEY will be exposed as import.meta.env.VITE_SOME_KEY
 ```
 https://vitejs.dev/config/shared-options.html#envprefix
 
-**note that if you use the following code it expose all variable in youre source code:
+**note that if you use the following code it expose all variable in youre source code:**
 ```js
 const envConfig = dotenv.parse(fs.readFileSync(envPath));
     define: {
