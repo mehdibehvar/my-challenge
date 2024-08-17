@@ -2,13 +2,12 @@
 
 **The Intersection Observer API provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.**
 
-*1. ساختار IntersectionObserver*
-
-- یک callback که هر بار که عنصر مشاهده شده وارد یا خارج از viewport شود، فراخوانی می‌شود.
-- گزینه‌هایی که مشخص می‌کنند که چه زمانی این callback باید اجرا شود.
-
-
-!Image
+## Key Concepts:
+- IntersectionObserver: The main object that tracks the visibility of an element.
+- IntersectionObserverEntry: An object representing a change in the intersection between the target element and its root container at a specific moment in time.
+- root: The element that is used as the viewport for checking visibility. If null, the browser viewport is used.
+- rootMargin: An offset around the root that can be used to grow or shrink the area considered for intersections.
+- threshold: A list of thresholds at which to trigger the observer callback. For example, a threshold of 0.5 triggers the callback when 50% of the target element is visible.
 
 ```js
     // Callback function to be executed when observer detects changes
